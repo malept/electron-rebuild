@@ -5,6 +5,7 @@ os: windows
 
 branches:
   only:
+  - fix-electron-locator
   - master
   - /^v\d+\.\d+\.\d+/
 
