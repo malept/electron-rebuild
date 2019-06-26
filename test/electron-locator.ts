@@ -23,7 +23,7 @@ const testElectronCanBeFound = () => {
   });
 };
 
-describe('locateElectronModule', function() {
+describe.only('locateElectronModule', function() {
   this.timeout(30 * 1000);
 
   before(() => uninstall('electron'));
