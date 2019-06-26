@@ -8,7 +8,7 @@ import { locateElectronModule } from '../src/electron-locator';
 function packageCommand(command: string, packageName: string) {
   return spawnPromise('npm', [command, packageName], {
     cwd: path.resolve(__dirname, '..'),
-    stdio: 'ignore',
+    stdio: 'inherit',
   });
 }
 
