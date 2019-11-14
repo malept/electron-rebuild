@@ -1,9 +1,9 @@
 import * as fs from 'fs-extra';
 import * as path from 'path';
 import { expect } from 'chai';
-import { spawnPromise } from 'spawn-rx';
 
 import { locateElectronModule } from '../src/electron-locator';
+import { spawnPromise } from '../src/spawn';
 
 function packageCommand(command: string, packageName: string): Promise<string> {
   return spawnPromise('npm', [command, '--no-save', packageName], {

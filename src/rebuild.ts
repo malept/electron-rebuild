@@ -1,4 +1,3 @@
-import { spawnPromise } from 'spawn-rx';
 import * as crypto from 'crypto';
 import * as debug from 'debug';
 import * as detectLibc from 'detect-libc';
@@ -7,8 +6,10 @@ import * as fs from 'fs-extra';
 import * as nodeAbi from 'node-abi';
 import * as os from 'os';
 import * as path from 'path';
-import { readPackageJson } from './read-package-json';
+
 import { lookupModuleState, cacheModuleState } from './cache';
+import { readPackageJson } from './read-package-json';
+import { spawnPromise } from './spawn';
 
 export type ModuleType = 'prod' | 'dev' | 'optional';
 export type RebuildMode = 'sequential' | 'parallel';
