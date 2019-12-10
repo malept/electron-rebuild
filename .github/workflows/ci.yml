@@ -19,7 +19,7 @@ jobs:
     - name: Install
       run: npm install
     - name: Lint
-      if: matrix.node-version != "6.x"
+      if: matrix.node-version != '6.x'
       run: npm run lint
     - name: Test
       run: npm run mocha
